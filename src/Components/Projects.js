@@ -1,49 +1,24 @@
+// src/pages/Projects.js
 import React from 'react';
-import styled from 'styled-components';
-
-const ProjectsSection = styled.section`
-  padding: 4rem 2rem;
-  background: #f8f8f8;
-`;
-
-const ProjectTitle = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-`;
-
-const ProjectList = styled.div`
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-`;
-
-const ProjectCard = styled.div`
-  background: #fff;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin-bottom: 2rem;
-`;
-
-const Project = ({ title, description, link }) => (
-  <ProjectCard>
-    <h3>{title}</h3>
-    <p>{description}</p>
-    <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
-  </ProjectCard>
-);
+import ProjectCard from './ProjectCard';
 
 const Projects = () => {
+  const projects = [
+    { title: "Project One", description: "A brief description of project one.", link: "#" },
+    { title: "Project Two", description: "A brief description of project two.", link: "#" },
+    { title: "Project Three", description: "A brief description of project three.", link: "#" },
+  ];
+
   return (
-    <ProjectsSection>
-      <ProjectTitle>My Projects</ProjectTitle>
-      <ProjectList>
-        <Project title="Project 1" description="Description of project 1" link="https://example.com" />
-        <Project title="Project 2" description="Description of project 2" link="https://example.com" />
-        <Project title="Project 3" description="Description of project 3" link="https://example.com" />
-      </ProjectList>
-    </ProjectsSection>
+    <section className="p-12 bg-gray-100">
+      <h2 className="text-4xl font-semibold text-gray-800 text-center">My Projects</h2>
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+    </section>
   );
-};
+}
 
 export default Projects;

@@ -1,33 +1,21 @@
+// src/pages/Home.js
 import React from 'react';
-import styled from 'styled-components';
-
-const HomeSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  background: #f8f8f8;
-`;
-
-const Title = styled.h1`
-  font-size: 3rem;
-  color: #333;
-`;
-
-const Subtitle = styled.p`
-  font-size: 1.2rem;
-  color: #666;
-`;
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <HomeSection>
-      <Title>Welcome to My Portfolio</Title>
-      <Subtitle>Building elegant web applications</Subtitle>
-    </HomeSection>
+    <section className="flex items-center justify-center h-screen bg-gray-100 text-center">
+      <div>
+        <h1 className="text-5xl font-bold text-gray-800">Hi, I'm Your Name</h1>
+        <p className="mt-4 text-xl text-gray-600">A passionate Software Developer</p>
+        <div className="mt-8">
+          <Link to="/about" className="px-6 py-2 bg-blue-500 text-white rounded-md shadow hover:bg-blue-600">
+            Learn More About Me
+          </Link>
+        </div>
+      </div>
+    </section>
   );
-};
+}
 
 export default Home;
