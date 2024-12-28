@@ -1,4 +1,3 @@
-// src/components/Hero.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Hero.css';
@@ -13,19 +12,19 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 >
-          Hi, I'm  <span> Mrudula </span> <br />
-         Ghanekar
+        <h1>
+          Hi, I'm <span>Mrudula</span> <br />
+          Ghanekar
         </h1>
         <p>
-        I combine technical expertise, <span>innovative problem-solving</span>, creativity and <span>practical experience</span> to create efficient, <span>scalable solutions</span> that deliver exceptional <span>user experiences</span> and drive <span>meaningful product development.
-       </span>  </p>
+          I combine technical expertise, <span>innovative problem-solving</span>, creativity, and <span>practical experience</span> to create efficient, <span>scalable solutions</span> that deliver exceptional <span>user experiences</span> and drive <span>meaningful product development.</span>
+        </p>
         <div className="buttons">
-          <a href="/portfolio/src/Components/Resume.pdf" download={"Resume.pdf"} className="btn">
+          <a href="/Resume.pdf" download={"Resume.pdf"} className="btn">
             Download Resume
           </a>
           <a href="#projects" className="btn">
-            See My Work  
+            See My Work
           </a>
         </div>
       </motion.div>
