@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+// Icons for tech stack (e.g., React, JavaScript)
+import { FaReact, FaJs, FaNodeJs, FaHtml5, FaCss3Alt, FaJava } from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";  // MongoDB icon
+import { SiSpring, SiFirebase, SiApifox, SiLeetcode, SiCodeblocks } from "react-icons/si";  // Spring and Firebase icons
+
+// Styled Components
 const AboutSection = styled.section`
   display: flex;
   justify-content: center;
@@ -58,6 +64,64 @@ const ExperienceItem = styled.div`
   font-size: 18px;
   margin-top: 10px;
   color: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 20px;
+  position: relative;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    color: #58a6ff;
+  }
+`;
+
+const TechStackTitle = styled.h3`
+  font-size: 24px;
+  margin-top: 30px;
+  color: #58a6ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`;
+
+const TechStackList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+  justify-content: center;
+`;
+
+const TechStackItem = styled.div`
+  background-color: #222;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #d1d5db;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #58a6ff;
+    color: #fff;
+  }
+
+  svg {
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+
+  &:hover svg {
+    color: #fff;
+  }
 `;
 
 const SkillsContainer = styled.div`
@@ -65,6 +129,7 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
+  justify-content: center;
 `;
 
 const Skill = styled.div`
@@ -79,24 +144,6 @@ const Skill = styled.div`
   &:hover {
     transform: scale(1.05);
   }
-`;
-
-const TechStackTitle = styled.h3`
-  font-size: 24px;
-  margin-top: 30px;
-  color: #58a6ff;
-`;
-
-const TechStackList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-`;
-
-const TechStackItem = styled.li`
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #d1d5db;
 `;
 
 const About = () => {
@@ -124,30 +171,52 @@ const About = () => {
 
           <ExperienceTitle>Experience</ExperienceTitle>
           <ExperienceItem>
-            • Software Engineer at Wipro (2021–Present): Leading key projects, mentoring junior developers, and optimizing processes to improve product quality and scalability.
-          </ExperienceItem>
-          <ExperienceItem>
-            • MTech Candidate at BITS Pilani (2021–Present): Applying advanced technical concepts through rigorous coursework and practical applications.
+            <strong>Software Engineer at Wipro (2021–Present)</strong>
+            <ul>
+              <li>Applied foundational knowledge to quickly tackle complex software challenges in a fast-paced environment.</li>
+              <li>Developed scalable, efficient solutions while continuously growing my technical expertise.</li>
+              <li>Led projects to significantly enhance system performance and scalability.</li>
+              <li>Mentored junior developers, facilitated knowledge transfer (KTs), and promoted a collaborative team culture.</li>
+              <li>Streamlined processes to ensure high-quality code and improve project delivery efficiency.</li>
+            </ul>
           </ExperienceItem>
 
-          <SkillsContainer>
-            <Skill>Problem Solving</Skill>
-            <Skill>Collaboration</Skill>
-            <Skill>Scalable Solutions</Skill>
-            <Skill>Innovation</Skill>
-            <Skill>Product Development</Skill>
-          </SkillsContainer>
+          <ExperienceItem>
+            <strong>MTech in Software Systems at BITS Pilani (2021–Present)</strong>
+            <ul>
+              <li>Pursuing advanced knowledge in software systems, enhancing my expertise in system design and distributed systems.</li>
+              <li>Applying cutting-edge technologies to solve complex problems, directly benefiting my work at Wipro.</li>
+              <li>Transforming theoretical knowledge into practical, high-impact solutions in the workplace.</li>
+            </ul>
+          </ExperienceItem>
 
           <TechStackTitle>Tech Stack</TechStackTitle>
           <TechStackList>
-            <TechStackItem>JavaScript</TechStackItem>
-            <TechStackItem>React</TechStackItem>
-            <TechStackItem>Java</TechStackItem>
-            <TechStackItem>Node.js</TechStackItem>
-            <TechStackItem>HTML/CSS</TechStackItem>
-            <TechStackItem>OOP</TechStackItem>
-            <TechStackItem>Data Structures & Algorithms</TechStackItem>
+            <TechStackItem>
+              <FaJs /> JavaScript
+            </TechStackItem>
+            <TechStackItem>
+              <FaReact /> React
+            </TechStackItem>
+            <TechStackItem>
+              <FaNodeJs /> Node.js
+            </TechStackItem>
+            <TechStackItem>
+              <FaJava /> Java
+            </TechStackItem>
+            <TechStackItem>
+              <DiMongodb /> MongoDB
+            </TechStackItem>
+            <TechStackItem>
+              <SiSpring /> Spring Framework
+            </TechStackItem>
+            <TechStackItem>
+              <SiFirebase /> Firebase
+            </TechStackItem>
+            <TechStackItem> <SiCodeblocks/> DSA (Data Structures & Algorithms)</TechStackItem>
+            <TechStackItem>  <SiApifox/> API</TechStackItem>
           </TechStackList>
+
         </TextWrapper>
       </Container>
     </AboutSection>

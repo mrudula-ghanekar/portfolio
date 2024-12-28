@@ -1,86 +1,60 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import "../styles/Contact.css";
 
 const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+  };
+
   return (
-    <ContactSection id="contact">
-      <h2>Contact Me</h2>
-      <Form
-        action="https://formspree.io/f/{your_form_id}" // Replace with your Formspree ID or backend endpoint
-        method="POST"
-      >
-        <InputWrapper>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" required />
-        </InputWrapper>
-        <InputWrapper>
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" required />
-        </InputWrapper>
-        <InputWrapper>
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </InputWrapper>
-        <button type="submit">Send</button>
-      </Form>
-    </ContactSection>
+    <section className="contact-section">
+      <div className="split-screen">
+        <div className="left-panel">
+          <h2>Let's Connect</h2>
+          <p>Feel free to reach out to me for collaborations or inquiries.</p>
+          <div className="contact-details">
+            <div className="detail-item">
+              <strong>Email:</strong> your-email@example.com
+            </div>
+            <div className="detail-item">
+              <strong>Phone:</strong> +1 (234) 567-890
+            </div>
+            <div className="social-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="right-panel">
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input type="text" id="name" name="name" required />
+              <label htmlFor="name">Your Name</label>
+            </div>
+            <div className="form-group">
+              <input type="email" id="email" name="email" required />
+              <label htmlFor="email">Your Email</label>
+            </div>
+            <div className="form-group">
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <label htmlFor="message">Your Message</label>
+            </div>
+            <button className="submit-button" type="submit">
+              {submitted ? "Sent!" : "Send Message"}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 };
-
-const ContactSection = styled.section`
-  padding: 100px 50px;
-  text-align: center;
-
-  h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #0056b3;
-    }
-  }
-`;
-
-const InputWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 500px;
-
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    &:focus {
-      border-color: #007bff;
-      outline: none;
-    }
-  }
-`;
 
 export default Contact;
