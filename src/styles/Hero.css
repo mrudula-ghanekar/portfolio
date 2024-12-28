@@ -55,7 +55,7 @@
     border-radius: 5px;
     transition: background 0.3s ease;
   }
-  
+   
   .buttons .btn:hover {
     background-color: #004c99;
   }

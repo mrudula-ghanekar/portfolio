@@ -15,7 +15,7 @@
   align-items: center;
   z-index: 10;
   transition: all 0.3s ease;
-}
+} 
 
 .sidebar-container:hover {
   width: 100px; /* Expand on hover for better visibility */
