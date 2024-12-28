@@ -1,5 +1,8 @@
 /* src/styles/Hero.css */
 .hero {
+  padding-left: 120px; /* Adjust based on your sidebar width */
+  margin-top: 20px;
+  text-align: center; /* Optional: Center the text */
     height: 100vh;
     display: flex;
     justify-content: space-between;
