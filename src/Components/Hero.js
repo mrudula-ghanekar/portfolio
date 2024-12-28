@@ -13,13 +13,13 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1>
-          Hi, I'm <span>Matt</span> <br />
-          A Web Developer
+        <h1 >
+          Hi, I'm  <span> Mrudula </span> <br />
+         Ghanekar
         </h1>
         <p>
-          I create beautiful web experiences with modern tools and technologies.
-        </p>
+        I combine technical expertise, <span>innovative problem-solving</span>, creativity and <span>practical experience</span> to create efficient, <span>scalable solutions</span> that deliver exceptional <span>user experiences</span> and drive <span>meaningful product development.
+       </span>  </p>
         <div className="buttons">
           <a href="/resume" className="btn">
             Download Resume
