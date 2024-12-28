@@ -16,7 +16,7 @@ const Sidebar = () => {
         <li className="nav-item">
           <Link to="About" smooth={true} duration={500} className="styled-link">
             <FaUserAlt />
-            <span>About</span>
+            <span>About</span> 
           </Link>
         </li>
         <li className="nav-item">

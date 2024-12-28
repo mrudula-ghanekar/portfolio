@@ -10,6 +10,7 @@ const Contact = () => {
     setTimeout(() => setSubmitted(false), 3000);
   };
 
+  
   return (
     <section className="contact-section">
       <div className="split-screen">

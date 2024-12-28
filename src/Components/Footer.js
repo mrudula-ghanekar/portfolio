@@ -24,6 +24,7 @@ const FooterContainer = styled.footer`
   background: white;
   border-top: 1px solid #eaeaea;
 
+  
   p {
     margin: 0;
     font-size: 14px;

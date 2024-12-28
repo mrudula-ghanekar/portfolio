@@ -146,6 +146,7 @@ const Skill = styled.div`
   }
 `;
 
+
 const About = () => {
   return (
     <section className="About">

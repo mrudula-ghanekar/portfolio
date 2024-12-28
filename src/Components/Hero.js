@@ -25,7 +25,7 @@ const Hero = () => {
             Download Resume
           </a>
           <a href="#projects" className="btn">
-            See My Work
+            See My Work  
           </a>
         </div>
       </motion.div>

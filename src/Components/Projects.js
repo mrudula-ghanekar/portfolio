@@ -11,7 +11,7 @@ const Projects = () => {
       <div className="projects-wrapper">
         {/* Project 1 */}
         <div className="project-flip">
-          <div className="flip-inner">
+          <div className="flip-inner">  
             <div className="flip-front">
               <img src={project1} alt="Mobile Phone Clone" />
             </div>
