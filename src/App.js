@@ -1,28 +1,30 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Home from './Components/Home';
-import About from './Components/About';
+import '../src/styles/Slidebar.css';       // Import sidebar styles
+import '../src/styles/Hero.css';          // Import hero styles
+import '../src/styles/Project.css';      // Import projects styles
+import '../src/styles/About.css';         // Import about styles
+import '../src/styles/Contact.css';       // Import contact styles
+import '../src/styles/Footer.css';        // Import footer styles
+
+import Hero from './Components/Hero';
+import Sidebar from './Components/Sidebar';
 import Projects from './Components/Projects';
+import About from './Components/About';
 import Contact from './Components/Contact';
-import './App.css';
-import './index.css';
-
-
-const App = () => {
+import Footer from './Components/Footer';
+import GlobalStyles from './styles/GlobalStyles';
+function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div>
+      <GlobalStyles/>
+    {/* Navbar for the page */}
+      <Sidebar />   {/* Sidebar for quick navigation */}
+      <Hero />      {/* Hero section with an intro */}
+      <About />     {/* About me section */}
+      <Projects />  {/* Projects section */}
+      <Contact />   {/* Contact section */}
+      <Footer />    {/* Footer section */}
+    </div>
   );
 }
 
