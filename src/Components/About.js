@@ -148,6 +148,8 @@ const Skill = styled.div`
 
 const About = () => {
   return (
+    <section className="About">
+
     <AboutSection>
       <Container>
         <TextWrapper>
@@ -220,6 +222,7 @@ const About = () => {
         </TextWrapper>
       </Container>
     </AboutSection>
+    </section>
   );
 };
 

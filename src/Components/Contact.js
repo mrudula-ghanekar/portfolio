@@ -18,10 +18,10 @@ const Contact = () => {
           <p>Feel free to reach out to me for collaborations or inquiries.</p>
           <div className="contact-details">
             <div className="detail-item">
-              <strong>Email:</strong> your-email@example.com
+              <strong>Email:</strong> work.mrudula00@gmail.com
             </div>
             <div className="detail-item">
-              <strong>Phone:</strong> +1 (234) 567-890
+              <strong>Phone:</strong> +91 9822XXXXX1
             </div>
             <div className="social-links">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
@@ -33,8 +33,14 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
         <div className="right-panel">
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/mpwwdvlw"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
             <div className="form-group">
               <input type="text" id="name" name="name" required />
               <label htmlFor="name">Your Name</label>

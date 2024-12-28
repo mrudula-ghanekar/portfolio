@@ -21,7 +21,7 @@ const Hero = () => {
         I combine technical expertise, <span>innovative problem-solving</span>, creativity and <span>practical experience</span> to create efficient, <span>scalable solutions</span> that deliver exceptional <span>user experiences</span> and drive <span>meaningful product development.
        </span>  </p>
         <div className="buttons">
-          <a href="/resume" className="btn">
+          <a href="../Components/Resume.pdf" className="btn">
             Download Resume
           </a>
           <a href="#projects" className="btn">

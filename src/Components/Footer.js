@@ -4,17 +4,15 @@ import '../styles/Footer.css';
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Mrudula Ghanekar. All rights reserved.</p>
       <SocialLinks>
-        <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/mrudula-ghanekar" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
-        <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/mrudula-ghanekar-bb00231bb/" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
-        <a href="https://twitter.com/yourtwitter" target="_blank" rel="noopener noreferrer">
-          Twitter
-        </a>
+       
       </SocialLinks>
     </FooterContainer>
   );
@@ -23,7 +21,7 @@ const Footer = () => {
 const FooterContainer = styled.footer`
   text-align: center;
   padding: 20px;
-  background-color: #f8f8f8;
+  background: white;
   border-top: 1px solid #eaeaea;
 
   p {
