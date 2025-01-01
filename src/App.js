@@ -4,7 +4,8 @@ import '../src/styles/Hero.css';          // Import hero styles
 import '../src/styles/Project.css';      // Import projects styles
 import '../src/styles/About.css';         // Import about styles
 import '../src/styles/Contact.css';       // Import contact styles
-import '../src/styles/Footer.css';        // Import footer styles
+import '../src/styles/Footer.css';   
+import './App.css'     // Import footer styles
 
 import Hero from './Components/Hero';
 import Sidebar from './Components/Sidebar';
