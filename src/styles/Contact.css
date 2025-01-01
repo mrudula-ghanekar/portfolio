@@ -1,4 +1,3 @@
-/* .contact-section styles */
 .contact-section {
   display: flex;
   justify-content: center;
@@ -12,7 +11,7 @@
   display: flex;
   width: 100%;
   max-width: 1200px;
-  border-radius: 16px;
+  border-radius: 16px; 
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
@@ -25,14 +24,12 @@
 
 .left-panel {
   flex: 1;
-  background: url('../Components/Assests/contact.jpg') center/cover no-repeat;
+ background: url('../Components/Assests/contact.jpg') center/cover no-repeat;
   color: white;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
 }
 
 .left-panel h2 {
@@ -145,57 +142,4 @@
 
 .submit-button:active {
   transform: scale(0.98);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .left-panel h2 {
-    font-size: 28px;
-  }
-
-  .left-panel p {
-    font-size: 16px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px;
-  }
-
-  .submit-button {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .split-screen {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .left-panel h2 {
-    font-size: 24px;
-  }
-
-  .left-panel p {
-    font-size: 14px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px;
-  }
-
-  .submit-button {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .split-screen {
-    flex-direction: column;
-  }
-
-  .right-panel {
-    padding: 20px;
-  }
 }

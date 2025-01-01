@@ -10,14 +10,12 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
     background-color: white;
     color: #333;
     line-height: 1.6;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   a {
@@ -37,48 +35,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0 2rem;
   }
 
-  /* Responsive container */
-  @media (max-width: 768px) {
-    .container {
-      padding: 0 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .container {
-      padding: 0 0.5rem;
-    }
-  }
-
   /* Flexbox Utilities */
   .flex {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-
-  .justify-between {
-    justify-content: space-between;
-  }
-
-  .align-start {
-    align-items: flex-start;
-  }
-
-  /* Responsive flexbox */
-  @media (max-width: 768px) {
-    .flex-column-responsive {
-      flex-direction: column;
-    }
   }
 
   /* Box Shadows for hover and buttons */
@@ -131,39 +92,7 @@ const GlobalStyles = createGlobalStyle`
   .hidden {
     display: none;
   }
-
-  /* Responsive font sizes */
-  @media (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    body {
-      font-size: 12px;
-    }
-  }
-
-  /* Hover Feedback */
-  a:hover, button:hover {
-    color: #0066cc;
-    transition: color 0.3s ease;
-  }
-
-  /* Dark Mode */
-  body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-
-  body.dark-mode a {
-    color: #58a6ff;
-  }
-
-  body.dark-mode .container {
-    padding: 0 2rem; /* Keep padding consistent for dark mode */
-  }
 `;
 
 export default GlobalStyles;
+ 

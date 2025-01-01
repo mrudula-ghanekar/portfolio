@@ -1,93 +1,67 @@
-/* Sidebar styling */
+/* sidebar.css */
+
 .sidebar-container {
   position: fixed;
-  top: 0;
+  top: 50%;
   left: 0;
-  height: 100%;
-  width: 60px;
-  background-color: #121212;
+  transform: translateY(-50%);
+  background: #0d1117;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+  padding: 20px 0;
+  width: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  transition: width 0.3s;
-  padding-top: 20px;
-}
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+} 
 
 .sidebar-container:hover {
-  width: 70px;
+  width: 100px; /* Expand on hover for better visibility */
 }
 
 .nav-list {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 
 .styled-link {
-  color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  color: #c9d1d9;
+  font-size: 22px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  transition: color 0.3s;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .styled-link:hover {
   color: #58a6ff;
+  transform: scale(1.15);
+  background: rgba(88, 166, 255, 0.1); /* Highlight on hover */
 }
 
 .styled-link span {
-  display: none;
   font-size: 14px;
+  font-weight: bold;
+  margin-top: 4px;
+  transition: color 0.3s ease;
 }
 
-.styled-link.active {
-  color: #58a6ff;
-}
-
-.styled-link:hover span {
-  display: inline-block;
-}
-
-.styled-link span {
-  margin-left: 8px;
-}
-
-/* For larger screens, show the text */
-@media (min-width: 768px) {
-  .styled-link span {
-    display: inline-block;
-  }
-}
-
-/* Responsive Sidebar */
-@media (max-width: 768px) {
-  .sidebar-container {
-    width: 60px;
-    padding: 10px 0;
-  }
-
-  .sidebar-container:hover {
-    width: 70px;
-  }
-
-  .nav-item {
-    gap: 10px;
-  }
-
-  .styled-link span {
-    font-size: 12px;
-  }
+.styled-link span:hover {
+  color: #ffffff;
 }
