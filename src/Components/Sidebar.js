@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import '../styles/Sidebar.css';
+import '../styles/Slidebar.css';
 import { FaHome, FaUserAlt, FaCode, FaEnvelope } from "react-icons/fa";
 
 const Sidebar = () => {
