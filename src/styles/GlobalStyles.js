@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   a {
@@ -73,6 +74,7 @@ const GlobalStyles = createGlobalStyle`
     align-items: flex-start;
   }
 
+  /* Responsive flexbox */
   @media (max-width: 768px) {
     .flex-column-responsive {
       flex-direction: column;
@@ -157,6 +159,10 @@ const GlobalStyles = createGlobalStyle`
 
   body.dark-mode a {
     color: #58a6ff;
+  }
+
+  body.dark-mode .container {
+    padding: 0 2rem; /* Keep padding consistent for dark mode */
   }
 `;
 
