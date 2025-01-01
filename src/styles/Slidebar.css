@@ -1,67 +1,23 @@
-/* sidebar.css */
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 60px;
+    padding: 10px 0;
+  }
 
-.sidebar-container {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background: #0d1117;
-  border-radius: 0 10px 10px 0;
-  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
-  padding: 20px 0;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 10;
-  transition: all 0.3s ease;
-} 
+  .sidebar-container:hover {
+    width: 70px;
+  }
 
-.sidebar-container:hover {
-  width: 100px; /* Expand on hover for better visibility */
-}
+  .nav-item {
+    gap: 10px;
+  }
 
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
+  .styled-link {
+    font-size: 18px;
+  }
 
-.nav-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.styled-link {
-  text-decoration: none;
-  color: #c9d1d9;
-  font-size: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 8px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.styled-link:hover {
-  color: #58a6ff;
-  transform: scale(1.15);
-  background: rgba(88, 166, 255, 0.1); /* Highlight on hover */
-}
-
-.styled-link span {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 4px;
-  transition: color 0.3s ease;
-}
-
-.styled-link span:hover {
-  color: #ffffff;
+  .styled-link span {
+    font-size: 12px;
+  }
 }
