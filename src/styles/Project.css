@@ -3,21 +3,49 @@
   .projects-wrapper {
     flex-direction: column;
     gap: 15px;
+    padding: 0 1rem; /* Added padding to avoid elements touching edges */
   }
 
   .project-flip {
     width: 100%;
+    padding: 0; /* Ensure the project cards fit the width */
   }
 
   .flip-back h3 {
-    font-size: 18px;
+    font-size: 20px; /* Slightly increased font size for better readability */
+    margin-bottom: 10px; /* Added margin for spacing */
   }
 
   .flip-back p {
-    font-size: 12px;
+    font-size: 14px; /* Increased font size for better readability */
+    line-height: 1.5; /* Improved line-height for readability */
+    margin-bottom: 15px; /* Added margin for spacing */
   }
 
   .flip-back a {
-    padding: 6px 12px;
+    padding: 8px 16px; /* Increased padding for better clickable area */
+    font-size: 14px; /* Adjusted font size for buttons */
+    display: inline-block; /* Make sure buttons are displayed properly */
+    text-align: center;
+  }
+
+  .project-flip img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-back h3 {
+    font-size: 18px; /* Reduced font size slightly for very small screens */
+  }
+
+  .flip-back p {
+    font-size: 12px; /* Reduced font size for smaller screens */
+  }
+
+  .flip-back a {
+    font-size: 12px; /* Adjusted button font size for very small screens */
+    padding: 6px 12px; /* Adjusted padding */
   }
 }
