@@ -1,4 +1,5 @@
 /* src/styles/About.css */
+
 .about {
   padding: 4rem 5%;
   background: #fff;
@@ -16,6 +17,7 @@
   color: #555;
   line-height: 1.8;
   text-align: center;
+  padding: 0 2rem; /* Added horizontal padding for better spacing */
 }
 
 /* Responsive styles */
@@ -32,7 +34,7 @@
   .about p {
     font-size: 1rem;
     line-height: 1.6;
-    padding: 0 1rem;
+    padding: 0 1rem; /* Adjusted padding for smaller screens */
   }
 }
 
@@ -47,5 +49,6 @@
 
   .about p {
     font-size: 0.9rem;
+    line-height: 1.5; /* Improved line height for mobile readability */
   }
 }
