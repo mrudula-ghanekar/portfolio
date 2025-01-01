@@ -30,7 +30,7 @@ const Hero = () => {
       </motion.div>
       <motion.img
         src={avatar}
-        alt="Avatar"
+        alt="Avatar of Mrudula Ghanekar"
         className="hero-avatar"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

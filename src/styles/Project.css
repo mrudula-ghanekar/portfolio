@@ -1,51 +1,94 @@
-/* Responsive Projects Section */
+.projects {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #fff;
+}
+
+.projects h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.projects-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-flip {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.project-flip:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.flip-back {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+.flip-back h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.flip-back p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.flip-back a {
+  background-color: #58a6ff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.flip-back a:hover {
+  background-color: #2b82db;
+}
+
 @media (max-width: 768px) {
   .projects-wrapper {
     flex-direction: column;
-    gap: 15px;
-    padding: 0 1rem; /* Added padding to avoid elements touching edges */
+    align-items: center;
   }
 
   .project-flip {
-    width: 100%;
-    padding: 0; /* Ensure the project cards fit the width */
-  }
-
-  .flip-back h3 {
-    font-size: 20px; /* Slightly increased font size for better readability */
-    margin-bottom: 10px; /* Added margin for spacing */
-  }
-
-  .flip-back p {
-    font-size: 14px; /* Increased font size for better readability */
-    line-height: 1.5; /* Improved line-height for readability */
-    margin-bottom: 15px; /* Added margin for spacing */
-  }
-
-  .flip-back a {
-    padding: 8px 16px; /* Increased padding for better clickable area */
-    font-size: 14px; /* Adjusted font size for buttons */
-    display: inline-block; /* Make sure buttons are displayed properly */
-    text-align: center;
-  }
-
-  .project-flip img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .flip-back h3 {
-    font-size: 18px; /* Reduced font size slightly for very small screens */
-  }
-
-  .flip-back p {
-    font-size: 12px; /* Reduced font size for smaller screens */
-  }
-
-  .flip-back a {
-    font-size: 12px; /* Adjusted button font size for very small screens */
-    padding: 6px 12px; /* Adjusted padding */
+    width: 80%;
+    margin-bottom: 30px;
   }
 }

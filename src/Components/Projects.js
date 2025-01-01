@@ -1,4 +1,3 @@
-// src/components/Projects.js
 import React from 'react';
 import '../styles/Project.css';
 import project1 from '../Components/Assests/Project1.png';
@@ -11,7 +10,7 @@ const Projects = () => {
       <div className="projects-wrapper">
         {/* Project 1 */}
         <div className="project-flip">
-          <div className="flip-inner">  
+          <div className="flip-inner">
             <div className="flip-front">
               <img src={project1} alt="Mobile Phone Clone" />
             </div>

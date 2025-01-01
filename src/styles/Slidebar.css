@@ -1,51 +1,93 @@
+/* Sidebar styling */
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: width 0.3s;
+  padding-top: 20px;
+}
+
+.sidebar-container:hover {
+  width: 70px;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.styled-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.styled-link:hover {
+  color: #58a6ff;
+}
+
+.styled-link span {
+  display: none;
+  font-size: 14px;
+}
+
+.styled-link.active {
+  color: #58a6ff;
+}
+
+.styled-link:hover span {
+  display: inline-block;
+}
+
+.styled-link span {
+  margin-left: 8px;
+}
+
+/* For larger screens, show the text */
+@media (min-width: 768px) {
+  .styled-link span {
+    display: inline-block;
+  }
+}
+
 /* Responsive Sidebar */
 @media (max-width: 768px) {
   .sidebar-container {
     width: 60px;
     padding: 10px 0;
-    transition: width 0.3s ease; /* Smooth transition for hover */
   }
 
   .sidebar-container:hover {
-    width: 80px; /* Increased width on hover for better accessibility */
+    width: 70px;
   }
 
   .nav-item {
-    gap: 15px; /* Increased gap for better spacing on smaller screens */
-  }
-
-  .styled-link {
-    font-size: 16px; /* Adjust font size for better readability on mobile */
-    transition: font-size 0.3s ease; /* Smooth transition for font size */
+    gap: 10px;
   }
 
   .styled-link span {
-    font-size: 14px; /* Increased span font size for better readability */
-  }
-
-  .sidebar-container:hover .styled-link {
-    font-size: 18px; /* Slightly increase font size on hover */
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar-container {
-    width: 50px; /* Further reduce sidebar width on smaller screens */
-  }
-
-  .sidebar-container:hover {
-    width: 60px; /* Slight increase in hover width for very small screens */
-  }
-
-  .nav-item {
-    gap: 8px; /* Reduced gap for very small screens */
-  }
-
-  .styled-link {
-    font-size: 14px; /* Smaller font size for tiny screens */
-  }
-
-  .styled-link span {
-    font-size: 12px; /* Adjusted span font size */
+    font-size: 12px;
   }
 }

@@ -146,11 +146,8 @@ const Skill = styled.div`
   }
 `;
 
-
 const About = () => {
   return (
-    <section className="About">
-
     <AboutSection>
       <Container>
         <TextWrapper>
@@ -195,35 +192,37 @@ const About = () => {
 
           <TechStackTitle>Tech Stack</TechStackTitle>
           <TechStackList>
-            <TechStackItem>
+            <TechStackItem aria-label="JavaScript">
               <FaJs /> JavaScript
             </TechStackItem>
-            <TechStackItem>
+            <TechStackItem aria-label="React">
               <FaReact /> React
             </TechStackItem>
-            <TechStackItem>
+            <TechStackItem aria-label="Node.js">
               <FaNodeJs /> Node.js
             </TechStackItem>
-            <TechStackItem>
+            <TechStackItem aria-label="Java">
               <FaJava /> Java
             </TechStackItem>
-            <TechStackItem>
+            <TechStackItem aria-label="MongoDB">
               <DiMongodb /> MongoDB
             </TechStackItem>
-            <TechStackItem>
+            <TechStackItem aria-label="Spring Framework">
               <SiSpring /> Spring Framework
             </TechStackItem>
-            <TechStackItem>
+            <TechStackItem aria-label="Firebase">
               <SiFirebase /> Firebase
             </TechStackItem>
-            <TechStackItem> <SiCodeblocks/> DSA (Data Structures & Algorithms)</TechStackItem>
-            <TechStackItem>  <SiApifox/> API</TechStackItem>
+            <TechStackItem aria-label="DSA">
+              <SiCodeblocks /> DSA (Data Structures & Algorithms)
+            </TechStackItem>
+            <TechStackItem aria-label="API">
+              <SiApifox /> API
+            </TechStackItem>
           </TechStackList>
-
         </TextWrapper>
       </Container>
     </AboutSection>
-    </section>
   );
 };
 
