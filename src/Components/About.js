@@ -182,7 +182,7 @@ const About = () => {
           </ExperienceItem>
 
           <ExperienceItem>
-            <strong>MTech in Software Systems at BITS Pilani (2021–Present)</strong>
+            <strong>MTech in Software Systems at BITS Pilani (Present)</strong>
             <ul>
               <li>Pursuing advanced knowledge in software systems, enhancing my expertise in system design and distributed systems.</li>
               <li>Applying cutting-edge technologies to solve complex problems, directly benefiting my work at Wipro.</li>
