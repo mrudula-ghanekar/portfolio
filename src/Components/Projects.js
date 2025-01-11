@@ -33,7 +33,7 @@ const Projects = () => {
             <div className="flip-back">
               <h3>Chess App</h3>
               <p>A simple, interactive chess app with real-time gameplay.</p>
-              <a href="https://chess-app-dusky.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <a href="https://chess-app-mg.vercel.app/" target="_blank" rel="noopener noreferrer">
                 View Project
               </a>
             </div>
