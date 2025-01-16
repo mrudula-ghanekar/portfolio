@@ -24,10 +24,10 @@ const Contact = () => {
               <strong>Phone:</strong> +91 9822XXXXX1
             </div>
             <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <a href="https://github.com/mrudula-ghanekar?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                 GitHub
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <a href="https://www.linkedin.com/in/mrudula-ghanekar-bb00231bb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                 LinkedIn
               </a>
             </div>
