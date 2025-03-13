@@ -8,7 +8,37 @@ const Projects = () => {
     <section id="projects" className="projects">
       <h2>My Projects</h2>
       <div className="projects-wrapper">
-        {/* Project 1 */}
+          {/* Project 1 */}
+          <div className="project-flip">
+          <div className="flip-inner">
+            <div className="flip-front">
+              <img src={project1} alt="AI-Resume Anylzer" />
+            </div>
+            <div className="flip-back">
+              <h3>AI-Resume Anylzer</h3>
+              <p>A Smart Resume Anlyzer built on Java and  React.</p>
+              <a href="https://ai-resume-frontend-mg.vercel.app/" target="_blank" rel="noopener noreferrer">
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+         {/* Project 2 */}
+         <div className="project-flip">
+          <div className="flip-inner">
+            <div className="flip-front">
+              <img src={project2} alt="Chess App" />
+            </div>
+            <div className="flip-back">
+              <h3>Chess App</h3>
+              <p>A simple, interactive chess app with real-time gameplay.</p>
+              <a href="https://chess-app-mg.vercel.app/" target="_blank" rel="noopener noreferrer">
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* Project 3 */}
         <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
@@ -23,22 +53,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-
-        {/* Project 2 */}
-        <div className="project-flip">
-          <div className="flip-inner">
-            <div className="flip-front">
-              <img src={project2} alt="Chess App" />
-            </div>
-            <div className="flip-back">
-              <h3>Chess App</h3>
-              <p>A simple, interactive chess app with real-time gameplay.</p>
-              <a href="https://chess-app-mg.vercel.app/" target="_blank" rel="noopener noreferrer">
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   );
