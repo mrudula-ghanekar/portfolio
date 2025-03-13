@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/Project.css';
 import project1 from '../Components/Assests/Project1.png';
 import project2 from '../Components/Assests/Project2.png';
+import project3 from '../Components/Assests/Project3.png';
+
 
 const Projects = () => {
   return (
@@ -42,7 +44,7 @@ const Projects = () => {
         <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
-              <img src={project1} alt="Mobile Phone Clone" />
+              <img src={project3} alt="Mobile Phone Clone" />
             </div>
             <div className="flip-back">
               <h3>Mobile Phone Clone</h3>
