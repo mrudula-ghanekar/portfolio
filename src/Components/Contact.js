@@ -3,16 +3,44 @@ import "../styles/Contact.css";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [result, setResult] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setResult("Sending...");
+
+    const formData = new FormData(e.target);
+    formData.append("access_key", "1e1cf244-04d8-4cfd-8309-5caa8dda3b3f"); // ✅ Replace this with your Web3Forms Access Key
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Message sent successfully! ✅");
+        e.target.reset(); // Reset form
+      } else {
+        setResult("Failed to send message. ❌ Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setResult("An error occurred. ❌ Please try again later.");
+    }
+
+    setTimeout(() => {
+      setSubmitted(false);
+      setResult("");
+    }, 4000); // Reset after 4 seconds
   };
 
   return (
     <section className="contact-section">
       <div className="split-screen">
+        {/* Left Panel */}
         <div className="left-panel">
           <h2>Let's Connect</h2>
           <p>Feel free to reach out to me for collaborations or inquiries.</p>
@@ -34,11 +62,10 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* Right Panel */}
         <div className="right-panel">
           <form
             className="contact-form"
-            action="https://formspree.io/f/mpwwdvlw"
-            method="POST"
             onSubmit={handleSubmit}
           >
             <div className="form-group">
@@ -81,11 +108,12 @@ const Contact = () => {
               tabIndex="4"
             >
               {submitted ? (
-                <span className="button-text">Sent!</span>
+                <span className="button-text">Sending...</span>
               ) : (
                 <span className="button-text">Send Message</span>
               )}
             </button>
+            {result && <p className="form-result">{result}</p>}
           </form>
         </div>
       </div>
