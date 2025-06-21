@@ -4,6 +4,7 @@ import project1 from '../Components/Assests/Project1.png';
 import project2 from '../Components/Assests/Project2.png';
 import project3 from '../Components/Assests/Project3.png';
 import project4 from '../Components/Assests/Project4.png';
+import project5 from '../Components/Assests/Project5.png';
 
 
 const Projects = () => {
@@ -30,7 +31,7 @@ const Projects = () => {
           <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
-              <img src={project1} alt="An Agentic Influencer Management System " />
+              <img src={project2} alt="An Agentic Influencer Management System " />
             </div>
             <div className="flip-back">
               <h3>AI-MultiAgent</h3>
@@ -45,7 +46,7 @@ const Projects = () => {
           <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
-            <img src={project2} alt="AI-Resume Anylzer" />
+            <img src={project3} alt="AI-Resume Anylzer" />
             </div>
             <div className="flip-back">
               <h3>AI-Resume Anylzer</h3>
@@ -60,7 +61,7 @@ const Projects = () => {
          <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
-              <img src={project3} alt="Chess App" />
+              <img src={project4} alt="Chess App" />
             </div>
             <div className="flip-back">
               <h3>Chess App</h3>
@@ -75,7 +76,7 @@ const Projects = () => {
         <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
-              <img src={project4} alt="Mobile Phone Clone" />
+              <img src={project5} alt="Mobile Phone Clone" />
             </div>
             <div className="flip-back">
               <h3>Mobile Phone Clone</h3>
