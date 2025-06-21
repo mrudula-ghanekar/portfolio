@@ -15,6 +15,21 @@ const Projects = () => {
           <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
+              <img src={project1} alt="AI Digital Agency" />
+            </div>
+            <div className="flip-back">
+              <h3>AI-system</h3>
+            <p>An Agentic Digital Marketing Agency </p>
+              <a href="https://leadzy-frontend.vercel.app" target="_blank" rel="noopener noreferrer">
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+         {/* Project 2 */}
+          <div className="project-flip">
+          <div className="flip-inner">
+            <div className="flip-front">
               <img src={project1} alt="An Agentic Influencer Management System " />
             </div>
             <div className="flip-back">
@@ -26,7 +41,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-          {/* Project 2 */}
+          {/* Project 3 */}
           <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
@@ -41,7 +56,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-         {/* Project 3 */}
+         {/* Project 4 */}
          <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
@@ -56,7 +71,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        {/* Project 4 */}
+        {/* Project 5 */}
         <div className="project-flip">
           <div className="flip-inner">
             <div className="flip-front">
